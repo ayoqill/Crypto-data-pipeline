@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS crypto_daily_market (
   price_usd DOUBLE PRECISION,
   market_cap_usd DOUBLE PRECISION,
   volume_24h_usd DOUBLE PRECISION,
+  price_change_24h_pct DOUBLE PRECISION,
 
   source TEXT DEFAULT 'coingecko',
   ingested_at TIMESTAMPTZ DEFAULT NOW(),

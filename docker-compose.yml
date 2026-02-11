@@ -60,10 +60,10 @@ services:
         airflow users create \
           --username admin \
           --password admin \
-          --firstname Admin \
-          --lastname User \
+          --firstname Aqil \
+          --lastname Aiman \
           --role Admin \
-          --email admin@example.com
+          --email aqilaiman058@gmail.com
     depends_on:
       postgres:
         condition: service_healthy

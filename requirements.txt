@@ -1,22 +1,13 @@
-# API & Data Processing
+# API & Processing
 requests==2.31.0
 pandas==2.1.3
-pycoingecko==2.0.23
 
 # Database
 psycopg2-binary==2.9.9
-sqlalchemy==2.0.23
+SQLAlchemy==2.0.23
 
 # Object Storage (MinIO)
 minio==7.2.0
-boto3==1.29.7
-
-# Data validation
-pydantic==2.5.0
-great-expectations==0.18.4
-
-# Environment & Security
-python-dotenv==1.0.0
 
 # Utilities
 python-dateutil==2.8.2

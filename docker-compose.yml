@@ -9,8 +9,7 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__CORE__LOAD_EXAMPLES: "False"
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "True"
-
-    AIRFLOW_CONN_POSTGRES_DEFAULT: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+    AIRFLOW_CONN_POSTGRES_DEFAULT: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
     AIRFLOW_CONN_MINIO_DEFAULT: s3://${MINIO_ACCESS_KEY}:${MINIO_SECRET_KEY}@minio:9000/data
     AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY}
     # Make your API key available inside Airflow tasks

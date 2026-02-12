@@ -4,36 +4,36 @@ An end-to-end data engineering pipeline that ingests cryptocurrency market data 
 
 Architecture
 
-API → MinIO (Bronze) → Postgres (Silver) → Postgres (Gold)
+- API → MinIO (Bronze) → Postgres (Silver) → Postgres (Gold)
 
-Bronze: Raw JSON stored in MinIO (daily partitioned)
+- Bronze: Raw JSON stored in MinIO (daily partitioned)
 
-Silver: Cleaned daily market snapshot table
+- Silver: Cleaned daily market snapshot table
 
-Gold: Derived analytical metrics (returns, moving averages)
+- Gold: Derived analytical metrics (returns, moving averages)
 
 ---
 Tech Stack
 
-Apache Airflow (Orchestration)
+- Apache Airflow (Orchestration)
 
-PostgreSQL (Data warehouse layer)
+- PostgreSQL (Data warehouse layer)
 
-MinIO (Object storage)
+- MinIO (Object storage)
 
-Docker (Containerization)
+- Docker (Containerization)
 
-CoinGecko API (Data source)
+- CoinGecko API (Data source)
 
 ---
 Design Principles
 
-Layered architecture (Bronze / Silver / Gold)
+- Layered architecture (Bronze / Silver / Gold)
 
-Idempotent daily loads
+- Idempotent daily loads
 
-Separation of raw and derived data
+- Separation of raw and derived data
 
-Re-runnable without duplication
+- Re-runnable without duplication
 
 Dockerized, reproducible environment

@@ -13,6 +13,7 @@ x-airflow-common: &airflow-common
     COINGECKO_API_KEY: ${COINGECKO_API_KEY}
   volumes:
     - ./dags:/opt/airflow/dags
+    - ./scripts:/opt/airflow/scripts 
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ./include:/opt/airflow/include

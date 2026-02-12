@@ -28,7 +28,7 @@ from scripts.storage_minio import ensure_bucket, put_json, get_json
 logger = logging.getLogger(__name__)
 
 BUCKET = "coingecko-raw"
-COINS = ["bitcoin", "ethereum", "solana", "tether", "bonk"]
+COINS = ["bitcoin", "ethereum", "solana", "tether", "bonk", "dogecoin", "binancecoin", "xrp", "cardano", "shibainu"]
 
 default_args = {
     "owner": "student",

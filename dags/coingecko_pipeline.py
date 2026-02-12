@@ -123,6 +123,12 @@ with DAG(
         python_callable=task_transform_and_load,
     )
 
+    build_gold = PostgresOperator(
+        task_id="build_gold",
+        postgres_conn_id="postgres_default",
+        sql="include/build_gold.sql",
+    )
+
     end = EmptyOperator(task_id="end")
 
-    start >> create_table >> ensure_bucket_task >> extract_store_raw >> transform_load >> end
+    start >> create_table >> ensure_bucket_task >> extract_store_raw >> transform_load >> build_gold >> end

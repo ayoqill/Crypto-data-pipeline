@@ -17,3 +17,15 @@ CREATE TABLE IF NOT EXISTS crypto_daily_market (
 
   PRIMARY KEY (coin_id, date)
 );
+
+-- GOLD: daily metrics derived from silver
+CREATE TABLE IF NOT EXISTS crypto_daily_metrics (
+  coin_id TEXT NOT NULL,
+  date DATE NOT NULL,
+  price_usd DOUBLE PRECISION,
+  return_1d_pct DOUBLE PRECISION,
+  ma_7 DOUBLE PRECISION,
+  ma_30 DOUBLE PRECISION,
+  updated_at TIMESTAMPTZ DEFAULT NOW(),
+  PRIMARY KEY (coin_id, date)
+);

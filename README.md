@@ -11,6 +11,7 @@ Bronze: Raw JSON stored in MinIO (daily partitioned)
 Silver: Cleaned daily market snapshot table
 
 Gold: Derived analytical metrics (returns, moving averages)
+
 ---
 Tech Stack
 
@@ -20,6 +21,19 @@ PostgreSQL (Data warehouse layer)
 
 MinIO (Object storage)
 
-Docker & Docker Compose (Containerization)
+Docker (Containerization)
 
 CoinGecko API (Data source)
+
+---
+Design Principles
+
+Layered architecture (Bronze / Silver / Gold)
+
+Idempotent daily loads
+
+Separation of raw and derived data
+
+Re-runnable without duplication
+
+Dockerized, reproducible environment

@@ -2,6 +2,12 @@
 # real pipeline logic is at scripts folder
 # just use this file to call the scripts here
 
+import sys
+from pathlib import Path
+
+# Add /opt/airflow (project root) into PYTHONPATH so `scripts.*` can be imported
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
 import logging
 from datetime import timedelta
 

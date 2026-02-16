@@ -17,7 +17,7 @@ x-airflow-common: &airflow-common
   volumes:
     - ./dags:/opt/airflow/dags
     - ./scripts:/opt/airflow/scripts 
-    - ./logs:/opt/airflow/logs
+    - airflow_logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ./include:/opt/airflow/include
   depends_on:
@@ -104,6 +104,7 @@ services:
       - postgres
 
 volumes:
+  airflow_logs:
   postgres_data:
   minio_data:
   pgadmin_data:
